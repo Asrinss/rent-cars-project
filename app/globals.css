@@ -1,21 +1,64 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+   
+ 
+body{
+    @apply bg-myLight-bg text-black;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark body{
+    @apply bg-myDark-bg text-white;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.bgone{
+    @apply bg-myLight-bg text-black dark:bg-myDark-bg dark:text-white !important;
+}
+
+.textone{
+    @apply text-black dark:text-white !important;
+}
+
+.placewhite{
+    @apply placeholder-white dark:placeholder-white !important;
+}
+
+.MainFormBg{
+    @apply bg-white dark:bg-myDark-100 !important;
+}
+
+.MainFormLabel{
+    @apply text-slate-600 dark:text-white !important;
+}
+
+.MainFormInputbg{
+    @apply bg-white dark:bg-myDark-100 border dark:border-black/40 dark:ring-offset-1 placeholder:text-slate-500 focus:outline-none focus:ring-0 focus:ring-transparent focus:ring-offset-2 dark:ring-offset-transparent !important;
+}
+
+.cardBg{
+    @apply bg-white dark:bg-myDark-100 !important;
+}
+
+.cardText{
+    @apply text-slate-500 dark:text-slate-300 !important;
+}
+
+.carouselPrev{
+    @apply mx-2 bottom-0 left-[35%] md:left-[40%] lg:left-[45%] w-12 h-12 flex items-center justify-center bg-myprimary  hover:bg-myprimary dark:bg-myprimary dark:hover:bg-myprimary  text-white !important;
+}
+
+.carouselNext{
+    @apply mx-2 bottom-0 right-[35%] md:right-[40%] lg:right-[45%] w-12 h-12 flex items-center justify-center bg-myprimary  hover:bg-myprimary dark:bg-myprimary dark:hover:bg-myprimary  text-white !important;
+}
+
+.serviceBg{
+    @apply bg-myLight-100 dark:bg-myDark-100 !important;
+}
+
+.sliderBtn{
+    @apply bg-myLight-100 text-black dark:bg-myLight-100 !important;
+}
+
+.filterbg{
+    @apply bg-myLight-100 text-black dark:bg-mysecondary dark:text-white border dark:border-slate-700 !important;
 }
