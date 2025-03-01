@@ -1,7 +1,7 @@
 'use client'
 
 import { Nerko_One } from 'next/font/google';
-import React, { use, useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { FaRegSnowflake } from 'react-icons/fa';
 import anime from 'animejs/lib/anime.es.js';
 
@@ -49,15 +49,18 @@ const SectionTitle = ({title,titleTwo,description}:SectionTitleProps) => {
     const observer = new IntersectionObserver(handleIntersection,{
       threshold:0.1,
     });
+
+    const currentTitleRef = titleRef.current;
+
     // Başlık elementi varsa observer'ı takip et
-    if (titleRef.current){
-      observer.observe(titleRef.current);
+    if (currentTitleRef){
+      observer.observe(currentTitleRef);
     }
 
     // Cleanup işlemi
     return () =>{
-      if(titleRef.current){
-        observer.unobserve(titleRef.current);
+      if(currentTitleRef){
+        observer.unobserve(currentTitleRef);
       }
     };
 

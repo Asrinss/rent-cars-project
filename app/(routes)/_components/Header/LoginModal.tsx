@@ -59,8 +59,8 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onLogin }) => 
       console.log('Login:', { username, password });
       onLogin(username); // Giriş başarılı olduğunda onLogin çağrılır
       onClose();
-    } catch (err) {
-      setError('An error occurred during login');
+    } catch (error: unknown) {
+      setError(error instanceof Error ? error.message : 'An error occurred during login');
     } finally {
       setIsLoading(false);
     }
@@ -83,8 +83,8 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onLogin }) => 
       await new Promise((resolve) => setTimeout(resolve, 1000));
       console.log('Sign Up:', { username, email, password });
       onClose();
-    } catch (err) {
-      setError('An error occurred during sign up');
+    } catch (error: unknown) {
+      setError(error instanceof Error ? error.message : 'An error occurred during sign up');
     } finally {
       setIsLoading(false);
     }

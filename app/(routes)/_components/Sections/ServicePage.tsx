@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
@@ -24,10 +24,19 @@ import {
 } from '@/components/ui/carousel';
 import {
   accordionData,
+  ServiceItemProps,
   servicesData,
   testimonialsData,
+  testimonialsDataProps,
   whyChooseUsData,
 } from '@/constans';
+
+interface FeatureItem {
+  id: number;
+  title: string;
+  description: string;
+  icon: string;
+}
 
 const ServicePage = () => {
   const servicesRef = useRef<HTMLDivElement>(null); // Animasyonlar için referanslar
@@ -79,7 +88,7 @@ const ServicePage = () => {
   }, []);
 
   // Hizmet kartlarını render eder
-  const renderServiceCard = (service: any, index: number) => (
+  const renderServiceCard = (service: ServiceItemProps, index: number) => (
     <div key={index} className="rounded-3xl bgone group p-8 service-animated">
       <Image alt={service.title} src={service.image} width={70} height={70} />
       <div className="mt-8 space-y-6">
@@ -98,7 +107,7 @@ const ServicePage = () => {
   );
 
   // Özellik öğelerini render eder
-  const renderFeatureItem = (item: any) => (
+  const renderFeatureItem = (item: FeatureItem) => (
     <div key={item.id} className="flex items-start gap-4">
       <div className="bg-myprimary p-4 rounded-full">
         <Image src={item.icon} alt={item.title} width={70} height={70} className="w-16 h-auto" />
@@ -111,7 +120,7 @@ const ServicePage = () => {
   );
 
   // Müşteri yorumlarını render eder
-  const renderTestimonialCard = (testimonial: any, index: number) => (
+  const renderTestimonialCard = (testimonial: testimonialsDataProps, index: number) => (
     <CarouselItem key={index} className="basis-1/1 md:basis-1/3">
       <Image
         alt={testimonial.author}

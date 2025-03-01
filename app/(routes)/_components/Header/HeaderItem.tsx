@@ -8,7 +8,7 @@ const inter = Inter({subsets: ["latin"], weight:"100"});
 
 const HeaderItem = ({ href, label }: HeaderDataProps) => {
   return (
-    <Link href={href} className={clsx('font-semibold hover:text-myprimary transition duration-500')}>
+    <Link href={href} className={clsx( inter.className,'font-semibold hover:text-myprimary transition duration-500')}>
       {label}
     </Link>
   )

@@ -35,7 +35,7 @@ const CarsPage = () => {
 
   const [filters, setFilters] = useState<FilterType>(initialFilters)
   const [currentPage, setCurrentPage] = useState(1)
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading] = useState(false)
   const [sortBy, setSortBy] = useState<SortType>('price-asc')
   const itemsPerPage = 6
 
