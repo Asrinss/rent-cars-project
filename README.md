@@ -1,14 +1,3 @@
-TypeScript: JavaScript'in statik tip denetimi sağlayan bir üst kümesi olarak, kodun daha güvenilir ve okunabilir olmasını sağlar.
-
-Next.js: React tabanlı bir çerçeve olup, sunucu tarafı render etme ve statik site oluşturma gibi özelliklerle performansı artırır.
-
-Tailwind CSS: Düşük seviyeli CSS sınıfları ile hızlı ve esnek stil oluşturmayı mümkün kılan bir CSS framework'üdür.
-
-PostCSS: CSS kodlarını dönüştürmek için kullanılan bir araç olup, tarayıcı uyumluluğunu artırmak ve kodları optimize etmek için eklentiler kullanır.
-
-ESLint: JavaScript ve TypeScript kodlarında hataları ve tutarsızlıkları bulup düzeltmeye yardımcı olan bir linting aracıdır.
-
-Prettier: Kod formatlama aracı olarak, kodun tutarlı bir stile sahip olmasını sağlar.
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
